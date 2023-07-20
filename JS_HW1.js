@@ -90,3 +90,29 @@ return ('You do not have access cause your age is '+age+' It is less then')
 console.log(CheckAge(17))
 console.log(CheckAge(18))
 console.log(CheckAge(61))
+
+// 2*:  Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.  
+var age_1 = 10;
+var age_2 = 18;
+var age_3 = 60;
+
+const CheckAge = function(age){
+
+    if (typeof +age == "number"){
+        console.log('Error_in_type')
+
+    } if (age<age_2) {
+    return ('You do not have access cause your age is '+age+' It is less then')
+    } else if (age >= age_2 && age < age_3) {
+        return ('Welcome!')
+    } else if (age  > age_3) {
+        return ('Keep calm and look Culture channel')
+    } else {
+        return ('Technical work')
+    } 
+}
+    
+console.log(CheckAge(17))
+console.log(CheckAge(18))
+console.log(CheckAge(61))
+console.log(CheckAge('test'))
